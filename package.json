@@ -1,7 +1,7 @@
 {
-  "name": "TP4---Citas---Parte-2-Logica",
+  "name": "TP-06-citasConRouters",
   "private": true,
-  "homepage": "https://IlanTauscher.github.io/TP4---Citas---Parte-2-Logica",
+  "homepage": "https://IlanTauscher.github.io/TP-06-citasConRouters",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -16,7 +16,8 @@
     "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.6.1"
+    "react-router": "^7.6.1",
+    "react-router-dom": "^7.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
