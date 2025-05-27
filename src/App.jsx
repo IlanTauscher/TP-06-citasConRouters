@@ -1,9 +1,9 @@
-import Listado from "./listado"
-import React, { useState, useEffect } from 'react'
-import Formulario from "./formulario"
-import './App.css'
-import { Routes, Route, NavLink } from "react-router";
-import Navbar from "./Navbar";
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from './Home';
+import MisCitas from './MisCitas';
+import NuevasReservas from './NuevasReservas';
 
 function App() {
   const KEY_LOCAL_STORAGE = 'datosform'
@@ -26,11 +26,9 @@ function App() {
       <div className="row">
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/Ingresar" element={<NuevasReservas/>} />
-          <Route path="/Pacientes" element={<MisCitas/>} />
+          <Route path="/nuevas-reservas" element={<NuevasReservas datos={datos} setDatos={setDatos} />} />
+          <Route path="/mis-citas" element={<MisCitas datos={datos} setDatos={setDatos} />} />
         </Routes>
-        <Formulario datos={datos} setDatos={setDatos}/>
-        <Listado datos={datos} setDatos={setDatos} />
       </div>
     </div>
   )
