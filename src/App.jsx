@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
-import Home from './Home';
-import MisCitas from './MisCitas';
-import NuevasReservas from './NuevasReservas';
+import Home from './Pages/Home';
+import MisCitas from './Pages/MisCitas';
+import NuevasReservas from './Pages/NuevasReservas';
 
 function App() {
   const KEY_LOCAL_STORAGE = 'datosform'
@@ -26,8 +26,9 @@ function App() {
       <div className="row">
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/nuevas-reservas" element={<NuevasReservas datos={datos} setDatos={setDatos} />} />
-          <Route path="/mis-citas" element={<MisCitas datos={datos} setDatos={setDatos} />} />
+          <Route path="/NuevasReservas" element={<NuevasReservas datos={datos} setDatos={setDatos} />} />
+          <Route path="/MisCitas" element={<MisCitas datos={datos} setDatos={setDatos} />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </div>
