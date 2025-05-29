@@ -1,6 +1,5 @@
 import React from "react";
 import Listado from '../Listado';
-import '../MisCitas.css'
 
 export default function MisCitas({datos, setDatos}) {
   return (
